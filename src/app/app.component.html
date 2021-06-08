@@ -1,1 +1,18 @@
-<h1>Hola Mundo!!</h1>
+<div class="row container mt-4"> <!--mt-4 hace una separación arriba-->
+  <div class="col-3"> <!--bootstrap cuenta con 12 columnas, aqui se usaran 3-->
+    <h2>Búsquedas</h2>
+    <hr>
+    <ul class="list-group">
+      <li class="list-group-item">Buscar país</li>
+      <li class="list-group-item">Por región</li>
+      <li class="list-group-item">Por capital</li>
+    </ul>
+  </div>
+
+  <div class="col"> <!--tome todo lo que queda faltando, si hay 3 columnas usadas quedan 12-3= 9 columnas-->
+    <h2>Por capital</h2>
+    <hr>
+    <app-por-capital></app-por-capital>
+  </div>
+
+</div>
