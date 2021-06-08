@@ -2,10 +2,23 @@
   <div class="col-3"> <!--bootstrap cuenta con 12 columnas, aqui se usaran 3-->
     <h2>Búsquedas</h2>
     <hr>
-    <ul class="list-group">
-      <li class="list-group-item">Buscar país</li>
-      <li class="list-group-item">Por región</li>
-      <li class="list-group-item">Por capital</li>
+    <ul class="list-group" style="cursor:pointer">
+      <li routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}"
+        class="list-group-item"> <!--routerLinkActive es para que se indique en que link se encuentra, options indica que unicamente ese link estará activo cuando sea exactamente ese, por el path vacío-->
+        Buscar país
+      </li>
+      <li routerLink="region"
+        routerLinkActive="active"
+        class="list-group-item">
+        Por región
+      </li>
+      <li routerLink ="capital"
+        routerLinkActive="active"
+        class="list-group-item"> <!--routerLink crea el enlace sin hacer un refresh en el navegador web-->
+        Por capital
+      </li>
     </ul>
   </div>
 
