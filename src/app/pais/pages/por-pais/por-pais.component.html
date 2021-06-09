@@ -20,7 +20,7 @@
   No se encontró el país con el termino {{termino}}
 </div>
 
-<div class="row">
+<div *ngIf="!hayError" class="row">
   <table class="table table-hover">
     <thead>
       <tr>
