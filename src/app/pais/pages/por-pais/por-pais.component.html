@@ -16,8 +16,8 @@
 
 <hr>
 
-<div class="alert alert-danger">
-  No se encontró el país con el mensaje de busqueda
+<div *ngIf="hayError" class="alert alert-danger">
+  No se encontró el país con el termino {{termino}}
 </div>
 
 <div class="row">
