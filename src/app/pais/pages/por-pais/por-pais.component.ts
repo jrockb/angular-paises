@@ -16,10 +16,10 @@ export class PorPaisComponent{
 
   constructor(private PaisService: PaisService) { }
 
-  buscar(): void{
+  buscar(termino: string): void{
     this.hayError = false;
+    this.termino = termino;
     if (this.termino.length > 0){
-      console.log(this.termino);
     // para que un Observable se dispare se debe tener un subscribe
       this.PaisService.buscarPais(this.termino)
       .subscribe((paises) => { // primer argumento es la respuesta exitosa
