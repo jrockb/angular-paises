@@ -1,3 +1,4 @@
+/* tslint:disable */
 export interface Pais {
   name:           string;
   topLevelDomain: string[];
