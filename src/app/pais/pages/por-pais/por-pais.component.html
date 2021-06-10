@@ -4,8 +4,9 @@
 <div class="row">
   <div class="col"> <!--tomará todas las 12 columnas-->
       <app-pais-input
-        (onEnter)="buscar($event)"> <!--va a escuchar el evento onEnter y va a enviar el evento al metodo buscar-->
-    </app-pais-input>
+        (onEnter)="buscar($event)"
+        (onDebounce)="sugerencias($event)" > <!--va a escuchar los eventos y los va a enviar a los metodos de por-pais.component.ts-->
+      </app-pais-input>
   </div>
 </div>
 
