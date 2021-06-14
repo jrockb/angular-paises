@@ -21,4 +21,10 @@ export class PaisService {
     return this.http.get<Pais[]>(url); // va retornar un observable, generico con arreglo de tipo Pais
   }
 
+  // metodo que realiza la petición http al servicio rest para buscar país por capital
+  buscarCapital(termino: string): Observable<Pais[]> {
+    const url = `${this.apiUrl}/capital/${termino}`;
+    return this.http.get<Pais[]>(url);
+  }
+
 }

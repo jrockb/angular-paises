@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 
@@ -15,6 +15,9 @@ export class PaisInputComponent implements OnInit{
   // tslint:disable-next-line: no-output-on-prefix
   @Output()
   onDebounce: EventEmitter<string> = new EventEmitter(); //  ondebounce se va a emitir cuando el usuario deja de escribir
+
+  @Input()
+  placeholder: string = '';
 
   debouncer: Subject<string> = new Subject(); // subject es un obervable, esto pertenece a rxjs que es la biblioteca de prog. reactiva
 
