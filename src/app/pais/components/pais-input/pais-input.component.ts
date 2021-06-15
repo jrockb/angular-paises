@@ -29,6 +29,7 @@ export class PaisInputComponent implements OnInit{
       debounceTime(300) // método de rxjs/operators que genera un retardo de tiempo en ms antes de emitir el siguiente valor
     ) // no se hace el subscribe hasta que el observable deje de emitir valores por 300 ms
     .subscribe( (valor: any) => { // se suscribe al debouncer
+      //console.log('debouncer', valor); // valor es el flujo de información que va al observable
       this.onDebounce.emit(valor); // cuando pasan los 300 ms se emite el valor
     });
   }

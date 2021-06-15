@@ -27,4 +27,10 @@ export class PaisService {
     return this.http.get<Pais[]>(url);
   }
 
+  // metodo que realiza la petición http al servicio rest para buscar país por el codigo
+  buscarPaisPorCod(id: string): Observable<Pais[]> {
+    const url = `${this.apiUrl}/alpha/${id}`;
+    return this.http.get<Pais[]>(url);
+  }
+
 }
