@@ -26,13 +26,14 @@ export class PorCapitalComponent {
         console.log(paises);
         this.paises = paises;
       }, (err) => { // segundo argumento para capturar errores
+        console.log(err);
         this.hayError = true;
         this.paises = [];
       });
     }
   }
 
-  sugerencias(termino: string){
+  sugerencias(termino: string): void{
     this.hayError = false;
     // crear sugerencias
   }
