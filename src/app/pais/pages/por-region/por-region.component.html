@@ -3,19 +3,19 @@
 
 <h5>Seleccione la region</h5>
 
-<!-- Otra manera de cambiar el estilo dinamicamente, evaluando la regionActiva -->
-<!-- tiene la desventaja de evaluar dos veces la misma variable, esto afecta el rendimiento-->
-<!-- [class.btn-primary]="region === regionActiva"-->
+<!-- Otra manera de cambiar el estilo dinamicamente evaluando la regionActiva -->
 <div class="row">
   <div class="col">
     <button *ngFor="let region of regiones"
         class="btn btn-outline-primary"
-        [ngClass]="{
-          'btn-primary': regionActiva === region,
-          'btn-outline-primary': regionActiva !== region
-        }"
+        [class]="(region === regionActiva) ? 'btn btn-primary' : 'btn btn-outline-primary'"
         (click)="activarRegion(region)">
         {{region}}
     </button>
   </div>
 </div>
+<!-- [ngClass]="{
+          'btn-primary': regionActiva === region,
+          'btn-outline-primary': regionActiva !== region
+        }"-->
+<!-- [class.btn-primary]="region === regionActiva"-->
