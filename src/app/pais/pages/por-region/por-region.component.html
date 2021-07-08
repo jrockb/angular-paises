@@ -4,15 +4,20 @@
 <h5>Seleccione la region</h5>
 
 <!-- Otra manera de cambiar el estilo dinamicamente evaluando la regionActiva -->
+<!-- La lógica se traslada a un método dentro del component.ts -->
 <div class="row">
   <div class="col">
     <button *ngFor="let region of regiones"
         class="btn btn-outline-primary"
-        [class]="(region === regionActiva) ? 'btn btn-primary' : 'btn btn-outline-primary'"
+        [class]="getClaseCSS(region)"
         (click)="activarRegion(region)">
         {{region}}
     </button>
   </div>
+</div>
+
+<div *ngIf="paises.length > 0" class="row">
+  <app-pais-tabla [paises]="paises"></app-pais-tabla>
 </div>
 <!-- [ngClass]="{
           'btn-primary': regionActiva === region,
