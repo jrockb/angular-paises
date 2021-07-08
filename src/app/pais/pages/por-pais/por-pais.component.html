@@ -1,22 +1,24 @@
-<h2>Por País</h2>
-<hr>
+<div class="animate__animated animate__fadeIn animate__faster">
+  <h2>Por País</h2>
+  <hr>
 
-<div class="row">
-  <div class="col"> <!--tomará todas las 12 columnas-->
-      <app-pais-input
-        (onEnter)="buscar($event)"
-        placeholder="Buscar país..."
-        (onDebounce)="sugerencias($event)" > <!--va a escuchar los eventos y los va a enviar a los metodos de por-pais.component.ts-->
-      </app-pais-input>
+  <div class="row">
+    <div class="col"> <!--tomará todas las 12 columnas-->
+        <app-pais-input
+          (onEnter)="buscar($event)"
+          placeholder="Buscar país..."
+          (onDebounce)="sugerencias($event)" > <!--va a escuchar los eventos y los va a enviar a los metodos de por-pais.component.ts-->
+        </app-pais-input>
+    </div>
   </div>
-</div>
 
-<hr>
+  <hr>
 
-<div *ngIf="hayError" class="alert alert-danger">
-  No se encontró el país con el termino {{termino}}
-</div>
+  <div *ngIf="hayError" class="alert alert-danger">
+    No se encontró el país con el termino {{termino}}
+  </div>
 
-<div *ngIf="paises.length > 0" class="row">
-  <app-pais-tabla [paises]="paises"></app-pais-tabla>
+  <div *ngIf="paises.length > 0" class="row">
+    <app-pais-tabla [paises]="paises"></app-pais-tabla>
+  </div>
 </div>

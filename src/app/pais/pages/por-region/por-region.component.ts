@@ -25,7 +25,7 @@ export class PorRegionComponent {
   }
 
   activarRegion(region: string): void{
-    if (region !== this.regionActiva){
+    if (region !== this.regionActiva){ // para no volver a realizar la consulta si ya existe
       this.regionActiva = region;
       this.paises = [];
       this.paisService.buscarPorRegion(region)
